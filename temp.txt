@@ -1,0 +1,40 @@
+c:\edward\nwo\angularrxjs\.editorconfig
+c:\edward\nwo\angularrxjs\e2e\tsconfig.json
+c:\edward\nwo\angularrxjs\tsconfig.app.json
+c:\edward\nwo\angularrxjs\tsconfig.base.json
+c:\edward\nwo\angularrxjs\tsconfig.json
+c:\edward\nwo\angularrxjs\tsconfig.spec.json
+c:\edward\nwo\browsersync22\bs-config.js
+c:\edward\nwo\n29900_tech\less-watch-compiler.config.json
+c:\edward\nwo\n29900_tech\system\config.js
+c:\edward\nwo\n29900_tech\system\developer_config.js
+c:\edward\nwo\n29900_tech\unitTestData\unitTest_config.js
+c:\edward\nwo\n49901_dpn\less-watch-compiler.config.json
+c:\edward\nwo\n49901_dpn\system\config.js
+c:\edward\nwo\n49901_dpn\system\developer_config.js
+c:\edward\nwo\n49901_dpn\unitTestData\unitTest_config.js
+c:\edward\nwo\n49902_proj\less-watch-compiler.config.json
+c:\edward\nwo\n49902_proj\system\config.js
+c:\edward\nwo\n49902_proj\unitTestData\unitTest_config.js
+c:\edward\nwo\n49905_pers\less-watch-compiler.config.json
+c:\edward\nwo\n49905_pers\system\config.js
+c:\edward\nwo\n49905_pers\system\developer_config.js
+c:\edward\nwo\n49905_pers\unitTestData\unitTest_config.js
+c:\edward\nwo\nodejspatterns_files\Ex_Files_Node_js_Design_Patterns\Exercise Files\Ch04\04_10\finished\config.json
+c:\edward\nwo\nodejspatterns_files\Ex_Files_Node_js_Design_Patterns\Exercise Files\Ch04\04_11\finished\config.json
+c:\edward\nwo\nodejspatterns_files\Ex_Files_Node_js_Design_Patterns\Exercise Files\Ch04\04_11\start\config.json
+c:\edward\nwo\OLDn49900_tech\less-watch-compiler.config.json
+c:\edward\nwo\OLDn49900_tech\system\config.js
+c:\edward\nwo\OLDn49900_tech\system\developer_config.js
+c:\edward\nwo\OLDn49900_tech\unitTestData\unitTest_config.js
+c:\edward\nwo\OLDn49902_proj\less-watch-compiler.config.json
+c:\edward\nwo\OLDn49902_proj\system\config.js
+c:\edward\nwo\OLDn49902_proj\unitTestData\unitTest_config.js
+c:\edward\nwo\OLD_0317_n49902_proj\less-watch-compiler.config.json
+c:\edward\nwo\OLD_0317_n49902_proj\system\config.js
+c:\edward\nwo\OLD_0317_n49902_proj\unitTestData\unitTest_config.js
+c:\edward\nwo\OLD_bef_merge_n29900_tech\less-watch-compiler.config.json
+c:\edward\nwo\OLD_bef_merge_n29900_tech\system\config.js
+c:\edward\nwo\OLD_bef_merge_n29900_tech\system\developer_config.js
+c:\edward\nwo\OLD_bef_merge_n29900_tech\unitTestData\unitTest_config.js
+c:\edward\nwo\webpack8\webpack.config.js

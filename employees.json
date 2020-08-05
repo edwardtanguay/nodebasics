@@ -2,7 +2,7 @@
 	{
 		"employeeID": 2,
 		"lastName": "Fuller",
-		"firstName": "Andrew",
+		"firstName":     "Andrew",
 		"title": "Vice President Sales",
 		"titleOfCourtesy": "Dr.",
 		"birthDate": "1952-02-19 00:00:00.000",
