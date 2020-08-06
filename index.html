@@ -1,1 +1,47 @@
-hello33333
+<!DOCTYPE html>
+
+<head>
+	<title>title</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+		integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+		integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+		crossorigin="anonymous"></script>
+	<style>
+		.btn-gray {
+			background-color: #eee;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<ht class="display-4">Send Message</ht>
+		</div>
+		<input class="form-control" placeholder="Name" />
+		<div id="send" class="btn mt-2 btn-gray">Send</div>
+		<div class="mt-4" id="messages">
+
+		</div>
+	</div>
+	<script>
+		$(() => {
+			$("#send").click(() => {
+				addMessage({ name: "Robert", text: "Hello" });
+			});
+		});
+
+		function addMessage(message) {
+			$('#messages').append(`<h4>${message.name}</h4><p>${message.text}</p>`);
+		}
+	</script>
+</body>
+
+</html>
