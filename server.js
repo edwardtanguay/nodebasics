@@ -11,28 +11,43 @@ app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const dbUrl = `mongodb+srv://learn:go2goTime@cluster0.hqjr5.mongodb.net/nodebasics.main?retryWrites=true&w=majority`;
+const dbUrl = `mongodb+srv://learn:go2goTime@cluster0.hqjr5.mongodb.net/nodebasics?retryWrites=true&w=majority`;
 
-const messages = [];
+const Message = mongoose.model('Message', {
+	name: String,
+	text: String
+});
 
 app.get('/messages', (req, res) => {
-	res.send(messages);
+	Message.find({}, (err, messages) => {
+		res.send(messages);
+	});
 });
 
 app.post('/messages', (req, res) => {
-	messages.push(req.body);
-	io.emit('message', req.body);
-	res.sendStatus(200);
+	const message = new Message(req.body);
+	message.save((err) => {
+		if (err) {
+			sendStatus(500);
+		} else {
+			io.emit('message', req.body);
+			res.sendStatus(200);
+		}
+	});
 });
 
 io.on('connection', (socket) => {
 	console.log('a user connected');
 });
 
-mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
-	console.log('mongo db connection', err);
+mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+	if (err) {
+		console.log('mongo db connection error:', err);
+	}
+	console.log('mongo db connection: success');
+
+	const server = http.listen(port, () => {
+		console.log(`Listening on port ${server.address().port}...`);
+	});  
 })
 
-const server = http.listen(port, () => {
-	console.log(`Listening on port ${server.address().port}...`);
-}); 
