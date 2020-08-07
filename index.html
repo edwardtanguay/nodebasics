@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-	<title>title</title>
+	<title>test 001</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
 		integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
@@ -11,6 +11,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
 		integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
 		crossorigin="anonymous"></script>
+	<script src="socket.io/socket.io.js"></script>
 	<style>
 		.btn-gray {
 			background-color: #eee;
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-	<div class="container">
+	<div class=" container">
 		<div class="jumbotron">
 			<ht class="display-4">Send Message</ht>
 		</div>
@@ -29,6 +30,8 @@
 		<div class="mt-4" id="messages"></div>
 	</div>
 	<script>
+		const socket = io();
+
 		$(() => {
 			$("#send").click(() => {
 				const message = { name: $('#name').val(), text: $('#text').val() };
@@ -36,6 +39,8 @@
 			});
 			getMessages();
 		});
+
+		socket.on('message', addMessage);
 
 		function addMessage(message) {
 			$('#messages').append(`<h4>${message.name}</h4><p>${message.text}</p>`);
